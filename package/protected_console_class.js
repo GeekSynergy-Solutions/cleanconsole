@@ -1,6 +1,6 @@
 class ProtectedConsoleClass {
     constructor() {
-        this.forProd = (process.env.NODE_ENV !== 'production')
+        this.forProd = (process.env.NODE_ENV == 'production')
     }
 
     logData(data, stillDisplayData = false) {
