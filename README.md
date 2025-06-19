@@ -23,10 +23,10 @@ yarn add protectedconsole
 ---
 
 ## Setup
-Ensure the project .env file has NODE_ENV set to 'production' if you are moving to production
+protectedconsole requires your project’s environment file (.env) to be specified and expects NODE_ENV to be set within it. To indicate that your project is running in production, set NODE_ENV=production in your env file. Use the appropriate command and installation steps to let protectedconsole know which environment file your project is using.
 
 ```bash
-NODE_ENV = production
+npx protectedconsole -- --env=.env
 ```
 
 ## 🛠 Usage
