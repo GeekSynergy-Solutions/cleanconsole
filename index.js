@@ -1,4 +1,4 @@
-import protectedConsoleClass from "./package/protected_console_class";
+import protectedConsoleClass from "./package/protected_console_class.js";
 
 var _protectedConsole = new protectedConsoleClass.ProtectedConsoleClass();
 

@@ -1,6 +1,6 @@
 {
   "name": "protectedconsole",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight library designed to keep your website or app's console clean. It hides logs, errors, warnings, and other messages from prying eyes—ensuring a tidy developer console. You can even display custom, eye-catching messages for curious visitors who peek under the hood.",
   "keywords": [
     "console",
@@ -17,7 +17,7 @@
   },
   "license": "MIT",
   "author": "Victor Nwakutere",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
