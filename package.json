@@ -1,5 +1,5 @@
 {
-  "name": "@devqualitywithvic/cleanconsole",
+  "name": "protectedconsole",
   "version": "1.0.0",
   "description": "A lightweight library designed to keep your website or app's console clean. It hides logs, errors, warnings, and other messages from prying eyes—ensuring a tidy developer console. You can even display custom, eye-catching messages for curious visitors who peek under the hood.",
   "keywords": [
@@ -7,13 +7,13 @@
     "debug",
     "print"
   ],
-  "homepage": "https://github.com/GeekSynergy-Solutions/cleanconsole#readme",
+  "homepage": "https://github.com/GeekSynergy-Solutions/protectedconsole#readme",
   "bugs": {
-    "url": "https://github.com/GeekSynergy-Solutions/cleanconsole/issues"
+    "url": "https://github.com/GeekSynergy-Solutions/protectedconsole/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GeekSynergy-Solutions/cleanconsole.git"
+    "url": "git+https://github.com/GeekSynergy-Solutions/protectedconsole.git"
   },
   "license": "MIT",
   "author": "Victor Nwakutere",
