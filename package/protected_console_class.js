@@ -9,11 +9,20 @@ class ProtectedConsoleClass {
 
         if (fs.existsSync(envPathFile) && !fromCli) {
             var saveEnvPath = fs.readFileSync(envPathFile, 'utf-8').trim();
-            dotenv.config({ path: saveEnvPath });
+            this._checkSavedEnvFilePath(saveEnvPath);
         } else {
             this._configuringProjectNewEnvPath();
         }
         this.forProd = (process.env.NODE_ENV === 'production');
+    }
+
+    _checkSavedEnvFilePath(saveEnvPath) {
+        if (fs.existsSync(saveEnvPath)) {
+
+            dotenv.config({ path: saveEnvPath });
+        } else {
+            this.warningData(`⚠️  Update project env file by running npx protectedconsole -- --env=[file_path], ${saveEnvPath} no longer exist, therefore falling back to default.`);
+        }
     }
 
     _configuringProjectNewEnvPath() {
