@@ -7,7 +7,7 @@ class ProtectedConsoleClass {
         if (fs.existsSync(envPath)) {
             dotenv.config({ path: envPath });
             this.logData(`⚠️ Environment variables ${envPath} loaded.`);
-            logger.infoData(`⚠️ NODE_ENV: ${process.env.NODE_ENV}`);
+            this.infoData(`⚠️ NODE_ENV: ${process.env.NODE_ENV}`);
         } else {
             this.warningData(`⚠️  Env file not found at ${envPath}. Falling back to default.`);
             dotenv.config();
