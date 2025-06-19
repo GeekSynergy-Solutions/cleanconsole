@@ -1,8 +1,8 @@
-# 🧼 cleanconsole
+# 🧼 protectedconsole
 
-[![npm version](https://img.shields.io/npm/v/cleanconsole.svg)](https://www.npmjs.com/package/cleanconsole)
+[![npm version](https://img.shields.io/npm/v/protectedconsole.svg)](https://www.npmjs.com/package/protectedconsole)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![GitHub Repo](https://img.shields.io/badge/github-GeeksSynergy--Solutions%2Fcleanconsole-blue?logo=github)](https://github.com/GeekSynergy-Solutions/cleanconsole)
+[![GitHub Repo](https://img.shields.io/badge/github-GeeksSynergy--Solutions%2Fprotectedconsole-blue?logo=github)](https://github.com/GeekSynergy-Solutions/protectedconsole)
 
 > ✅ Secure, environment-aware logging utility for Node.js and browser apps — suppress console output in production, log freely in development.
 
@@ -11,13 +11,13 @@
 ## 📦 Install
 
 ```bash
-npm install cleanconsole
+npm install protectedconsole
 ```
 
 or
 
 ```bash
-yarn add cleanconsole
+yarn add protectedconsole
 ```
 
 ---
@@ -32,7 +32,7 @@ NODE_ENV = production
 ## 🛠 Usage
 
 ```js
-import cleanconsole from 'cleanconsole';
+import protectedconsole from 'protectedconsole';
 
 const userData = {
   name: 'Alice',
@@ -40,16 +40,16 @@ const userData = {
 };
 
 // Will log only in non-production environments
-cleanconsole.protectedLogData(userData);
+protectedconsole.protectedLogData(userData);
 
 // Will always log, even in production
-cleanconsole.protectedWarningData('This warning is always shown!', true);
+protectedconsole.protectedWarningData('This warning is always shown!', true);
 
 // Suppressed in production by default
-cleanconsole.protectedInfoData({ status: 'Init complete' });
+protectedconsole.protectedInfoData({ status: 'Init complete' });
 
 // Force debug log in all environments
-cleanconsole.protectedDebugData('Debugging info', true);
+protectedconsole.protectedDebugData('Debugging info', true);
 ```
 
 ---
@@ -98,7 +98,7 @@ Logs using `console.debug`.
 ## 📂 Project Structure
 
 ```
-cleanconsole/
+protectedconsole/
 ├── index.js
 ├── package/
 │   └── clean_console_class.js
@@ -110,12 +110,12 @@ cleanconsole/
 
 ## 📍 Repository
 
-GitHub: [GeekSynergy-Solutions/cleanconsole](https://github.com/GeekSynergy-Solutions/cleanconsole)
+GitHub: [GeekSynergy-Solutions/protectedconsole](https://github.com/GeekSynergy-Solutions/protectedconsole)
 
 Clone:
 
 ```bash
-git clone https://github.com/GeekSynergy-Solutions/cleanconsole.git
+git clone https://github.com/GeekSynergy-Solutions/protectedconsole.git
 ```
 
 ---
@@ -143,7 +143,7 @@ Use with:
 
 ```js
 const isDev = process.env.NODE_ENV !== 'production';
-cleanconsole.protectedInfoData('Hello Dev!', isDev);
+protectedconsole.protectedInfoData('Hello Dev!', isDev);
 ```
 
 This gives you precise control over logging in your apps or internal tools.
