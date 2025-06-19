@@ -7,4 +7,6 @@ var protectedWarningData = (protectedData, showProtectedData = false) => _protec
 var protectedInfoData = (protectedData, showProtectedData = false) => _protectedConsole.infoData(protectedData, showProtectedData);
 var protectedDebugData = (protectedData, showProtectedData = false) => _protectedConsole.debugData(protectedData, showProtectedData);
 
+protectedLogData('text');
+
 export default { protectedLogData, protectedWarningData, protectedInfoData, protectedDebugData }
