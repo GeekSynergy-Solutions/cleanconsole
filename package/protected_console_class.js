@@ -1,4 +1,4 @@
-class CleanConsoleClass {
+class ProtectedConsoleClass {
     constructor() {
         this.forProd = (process.env.NODE_ENV !== 'production')
     }
