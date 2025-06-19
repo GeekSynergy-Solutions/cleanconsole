@@ -1,13 +1,14 @@
 {
   "name": "protectedconsole",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A lightweight library designed to keep your website or app's console clean. It hides logs, errors, warnings, and other messages from prying eyes—ensuring a tidy developer console. You can even display custom, eye-catching messages for curious visitors who peek under the hood.",
   "keywords": [
     "console",
     "debug",
     "print",
     "security",
-    "logger"
+    "logger",
+    "logging"
   ],
   "bin": {
     "protectedconsole": "./bin/setup.js"
