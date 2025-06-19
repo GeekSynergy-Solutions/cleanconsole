@@ -21,7 +21,7 @@ class ProtectedConsoleClass {
 
             dotenv.config({ path: saveEnvPath });
         } else {
-            this.warningData(`⚠️  Update project env file by running npx protectedconsole -- --env=[file_path], ${saveEnvPath} no longer exist, therefore falling back to default.`);
+            this.warningData(`⚠️  Update project env file by running npx protectedconsole -- --env=[file_path], ${saveEnvPath} no longer exist.`);
         }
     }
 
