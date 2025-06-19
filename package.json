@@ -1,0 +1,25 @@
+{
+  "name": "cleanconsole",
+  "version": "1.0.0",
+  "description": "Control where to console data as you build",
+  "keywords": [
+    "console",
+    "debug",
+    "print"
+  ],
+  "homepage": "https://github.com/GeekSynergy-Solutions/cleanconsole#readme",
+  "bugs": {
+    "url": "https://github.com/GeekSynergy-Solutions/cleanconsole/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeekSynergy-Solutions/cleanconsole.git"
+  },
+  "license": "MIT",
+  "author": "Victor Nwakutere",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
