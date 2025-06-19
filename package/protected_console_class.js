@@ -32,4 +32,4 @@ class ProtectedConsoleClass {
     }
 }
 
-export default {CleanConsoleClass}
+export default {ProtectedConsoleClass}

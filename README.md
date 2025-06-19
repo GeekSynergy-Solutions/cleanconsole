@@ -101,7 +101,7 @@ Logs using `console.debug`.
 protectedconsole/
 ├── index.js
 ├── package/
-│   └── clean_console_class.js
+│   └── protected_console_class.js
 ├── package.json
 └── README.md
 ```
