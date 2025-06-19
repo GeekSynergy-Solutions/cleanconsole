@@ -1,10 +1,17 @@
 import dotenv from "dotenv";
-import path from "path";
+import fs from "fs";
 
 class ProtectedConsoleClass {
     constructor() {
         const envPath = this._getEnvPathFromArgs();
-        dotenv.config({ path: envPath });
+        if (fs.existsSync(envPath)) {
+            dotenv.config({ path: envPath });
+            this.logData(`⚠️ Environment variables ${envPath} loaded.`);
+            logger.infoData(`⚠️ NODE_ENV: ${process.env.NODE_ENV}`);
+        } else {
+            this.warningData(`⚠️  Env file not found at ${envPath}. Falling back to default.`);
+            dotenv.config();
+        }
         this.forProd = (process.env.NODE_ENV === 'production')
     }
 
@@ -13,9 +20,9 @@ class ProtectedConsoleClass {
         const envArg = process.argv.find(arg => arg.startsWith(envArgPrefix));
         if (envArg) {
             const providedPath = envArg.slice(envArgPrefix.length);
-            return path.resolve(providedPath);
+            return providedPath;
         }
-        return path.resolve('.env');
+        return '.env';
     }
 
     logData(data, stillDisplayData = false) {
