@@ -5,20 +5,21 @@ import { fileURLToPath } from 'url';
 
 class ProtectedConsoleClass {
     constructor(fromCli = false) {
-        const envPathFile = path.join(this._getDirName(), 'project_updated_env_path.txt');
+        if (process.env.NODE_ENV !== 'production') {
+            const envPathFile = path.join(this._getDirName(), 'project_updated_env_path.txt');
 
-        if (fs.existsSync(envPathFile) && !fromCli) {
-            var saveEnvPath = fs.readFileSync(envPathFile, 'utf-8').trim();
-            this._checkSavedEnvFilePath(saveEnvPath);
-        } else {
-            this._configuringProjectNewEnvPath();
+            if (fs.existsSync(envPathFile) && !fromCli) {
+                var saveEnvPath = fs.readFileSync(envPathFile, 'utf-8').trim();
+                this._checkSavedEnvFilePath(saveEnvPath);
+            } else {
+                this._configuringProjectNewEnvPath();
+            }
         }
         this.forProd = (process.env.NODE_ENV === 'production');
     }
 
     _checkSavedEnvFilePath(saveEnvPath) {
         if (fs.existsSync(saveEnvPath)) {
-
             dotenv.config({ path: saveEnvPath });
         } else {
             this.warningData(`⚠️  Update project env file by running npx protectedconsole -- --env=[file_path], ${saveEnvPath} no longer exist.`);
